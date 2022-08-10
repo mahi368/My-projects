@@ -1,0 +1,27 @@
+<h3>new order</h3>
+
+<%= form_with model: @order , url: orders_path , method: :post do |form| %>
+<div>
+	<%= form.label :name %><br>
+	<%= form.text_field :name %>
+</div><br>
+<div>
+	<%= form.label :email %><br>
+	<%= form.email_field :email %>
+</div><br>
+<div>
+	<%= form.label :address %><br>
+	<%= form.text_field :address %>
+</div><br>
+<div>
+	<%= form.label :phone %><br>
+	<%= form.text_field :phone %>
+</div><br>
+<div>
+	<%= form.label :message %><br>
+	<%= form.text_field :message %>
+</div><br>
+<div>
+	<%= form.submit 'save' %>
+</div>
+<% end %>
